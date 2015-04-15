@@ -10,7 +10,7 @@ $(document).ready(function(){
     return false;
   });
 });
-<<<<<<< HEAD
+
 
 var image1 = new Image();
 image1.src = "./img/design.jpg";
@@ -38,5 +38,4 @@ function slideIt() {
 }
 slideIt();
 
-=======
->>>>>>> c9091e58e2283a8011973b3fa19ec63960bebc6b
+

@@ -169,14 +169,14 @@ a:active {
 }
 
 /* Floated Columns ------------------ */
-<<<<<<< HEAD
+
 #imagis img {
     width: 250px;
     height: 180px;
     text-align: center;
 }
 
-=======
+
 
 .intress {
     display: inline;
@@ -184,7 +184,7 @@ a:active {
     padding: 5px;
     float: left;
 }
->>>>>>> c9091e58e2283a8011973b3fa19ec63960bebc6b
+
 .social {
     display: inline;
     padding: 20px;
