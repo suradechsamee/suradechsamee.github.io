@@ -1,0 +1,67 @@
+@media screen and (min-width: 200px){
+
+h1 {
+    font-size: 1.5em;
+  }
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 0.8em;
+}
+
+.primary-content{
+    width: auto;
+}
+.secondary-content {
+    width: auto;
+}
+
+    
+}
+@media screen and (min-width: 480px) {
+  
+  /**********************************
+  TWO COLUMN LAYOUT
+  ***********************************/
+  
+h1 {
+    font-size: 1.5em;
+  }
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.5em;
+}
+.primary-content{
+    width: auto;
+}
+.secondary-content {
+    width: auto;
+}  
+  
+}
+
+@media screen and (min-width: 660px) {
+
+  /**********************************
+  HEADER
+  ***********************************/
+
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 1.825em;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+}
+
+
+
