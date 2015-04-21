@@ -1,3 +1,5 @@
+// Content toggle start //
+
 $(document).ready(function(){
   $("h3.flip").click(function () {
     $(this).next("p.intro").slideToggle("slow");
@@ -11,6 +13,9 @@ $(document).ready(function(){
   });
 });
 
+// Content toggle end //
+
+// Image slider start //
 
 var image1 = new Image();
 image1.src = "./img/design.jpg";
@@ -24,8 +29,13 @@ var image5 = new Image();
 image5.src = "./img/topgear.jpg";
 
 var numberImage = 1;
+var slide = true;
+
 function slideIt() {
+    if(slide)
+    {
     document.images.slide.src = eval("image"+numberImage+".src")
+    
     if(numberImage < 5) {
         numberImage = numberImage + 1;
         
@@ -34,8 +44,27 @@ function slideIt() {
        numberImage = 1;
         
     }
-    setTimeout("slideIt()",3000);
+    }
+    setTimeout("slideIt()",5000);
+    
+    
 }
+
+
+
+$(document).ready(function(){
+    $("#imagis").mouseenter(function(){
+        $(this).next("img").stop(true);
+        slide = false;
+        return true;
+    });
+    $("#imagis").mouseleave(function(){
+        $(this).next("img").stop(true);
+        slide = true;
+        return true;
+    });
+});
+
+
 slideIt();
-
-
+// Image slider end //
