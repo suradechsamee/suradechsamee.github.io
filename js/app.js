@@ -15,7 +15,7 @@ $(document).ready(function(){
 var image1 = new Image();
 image1.src = "./img/design.jpg";
 var image2 = new Image();
-image2.src = "./img/fotboll.jpg";
+image2.src = "./img/fotboll3.jpg";
 var image3 = new Image();
 image3.src = "./img/puck.jpg";
 var image4 = new Image();

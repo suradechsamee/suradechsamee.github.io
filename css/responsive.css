@@ -17,6 +17,12 @@ h3 {
     width: auto;
 }
 
+#imagis img {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
     
 }
 @media screen and (min-width: 480px) {
@@ -39,7 +45,13 @@ h3 {
 }
 .secondary-content {
     width: auto;
-}  
+} 
+#imagis img {
+    width: 250px;
+    height: 180px;
+    text-align: center;
+}
+
   
 }
 
@@ -59,7 +71,12 @@ h3 {
     margin-bottom: 20px;
   }
   
-  
+  #imagis img {
+    width: 250px;
+    height: 180px;
+    text-align: center;
+}
+
   
 }
 
