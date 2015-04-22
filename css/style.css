@@ -1,7 +1,7 @@
 /* Base Styles -------------------- */
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,19 +11,19 @@ body {
 }
 
 h1 {  
-  font-size: 5.625rem; /* 90px/16px  */
-  color: rgba(255, 255, 255, 1);
-  text-transform: uppercase;
-  font-weight: normal;
-  line-height: 1.3;
-  text-shadow: 2px 2px 0px red,
+    font-size: 5.625rem; /* 90px/16px  */
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow: 2px 2px 0px red,
                 4px 2px 0px cyan,
                 6px 4px 0px pink;
 }
 
 h2 {
     font-size: 3.3125em; /* 53px/16px  */
-    font-weight: normal;
+    font-weight: bold;
     line-height: 1.1;
     margin: 0 0 .5em; /* 0 0 26px */
     
@@ -31,44 +31,46 @@ h2 {
 
 h3 {
     font-size: 1.25em; /* 20px/16px  */
-    color: #48525c;
+    color: white;
     line-height: 1.2;
-    margin-bottom: 1.7em; /* 34px */
+    margin-top: 150px;
+    /*margin-bottom: 1.7em; /* 34px */
     text-align: center;
     
 }
 
 img {
-  max-width: 100%;
-  margin-bottom: 20px;
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 
 ul,
 ol {
-  margin: 30px 0;
+    margin: 30px 0;
 }
 
 li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 /* Pseudo-classes ------------------ */
 
+
 a:link {
-  color: rgb(255, 169, 73);
-  text-decoration: none;
+    color: rgb(255, 169, 73);
+    text-decoration: none;
 }
 
 a:visited {
-  color: lightblue;
+    color: lightblue;
 }
 
 a:hover {
-  color: rgba(255, 169, 73, .4);
+    color: rgba(255, 169, 73, .4);
 }
 
 a:active {
-  color: lightcoral;
+    color: lightcoral;
 }
 
 /* Main Styles --------------------- */
@@ -94,15 +96,17 @@ a:active {
 }
 
 .title {
-  color: white;
-  font-size: 1.25rem; /* 26px/16px */
+    color: white;
+    font-size: 1.25rem; /* 26px/16px */
 }
 
 .intro {
     padding: 8px;
-    color: black;
-    font-size: 0.80em; /* 20px/16px */
+    color: rgb(55, 169, 173);
+    font-size: 1em; /* 20px/16px */
     line-height: 1.6; 
+    margin: 30px;
+    margin-top: 80px;
     
 }
 
@@ -120,7 +124,7 @@ a:active {
 .secondary-content {
 	padding-top: 80px;
 	padding-bottom: 70px;
-    border-bottom: 2px solid #dfe2e6;
+    /*border-bottom: 2px solid #dfe2e6;*/
 }
 
 .callout {
@@ -137,9 +141,9 @@ a:active {
     border-bottom: 10px solid #ffa949;
 }
 
-.t-border {
+/*.t-border {
     border-top: 2px solid #dfe2e6;
-}
+}*/
 
 /* Layout Styles ------------------ */
 
@@ -152,7 +156,7 @@ a:active {
     max-width: 960px;
 }
 
-.skills {
+/*.skills {
     color: white;
     text-align: center;
     padding: 18% 24%;
@@ -164,32 +168,11 @@ a:active {
     box-shadow:inset 0px 0px 100px 50px black;
     border-radius: 20% 30% 100% 50%; 
 }
-
-.arrow {
-    width: 50px;
-}
+*/
 
 /* Floated Columns ------------------ */
 
-#imagis img {
-    width: 250px;
-    height: 180px;
-    text-align: center;
-}
 
-
-
-.intress {
-    display: inline;
-    width: 20%;
-    padding: 5px;
-    float: left;
-}
-
-.social {
-    display: inline;
-    padding: 20px;
-}
 .kon {
     display: none;
 }
@@ -197,7 +180,75 @@ a:active {
 /* Float Clearfix ------------------ */
 
 .group:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
+
+/* flip effect */
+
+.flipper {
+    width: 350px;
+    height: 400px;
+    margin: 10px;
+}
+.flipper > .front{
+    position: absolute;
+    transform: perspective( 600px ) rotateY( 0deg );
+    background: yellow;
+    width: 350px;
+    height: 400px;
+    border-radius: 7px;
+    transition: transform .5s linear 0s;
+    backface-visibility: hidden;
+    background: url('../img/matrix2.jpg') no-repeat center;
+    background-size: cover;
+    
+}
+.flipper > .back{
+    position: absolute;
+    transform: perspective( 600px ) rotateY( 180deg );
+    background: blue;
+    width: 350px;
+    height: 400px;
+    border-radius: 7px;
+    transition: transform .5s linear 0s;
+    backface-visibility: hidden;
+    background: url('../img/thumbs.jpg') no-repeat center;
+    background-size: cover;
+}
+.flipper:hover > .front{
+    transform: perspective( 600px ) rotateY( -180deg );
+}
+.flipper:hover > .back{
+    transform: perspective( 600px ) rotateY( 0deg );
+}
+
+
+
+/* flip effect end */
+
+/* contact */
+
+#mail,
+#phone,
+#fbook {
+    display: inline;
+    margin: 100px;
+    text-align: center;
+}
+
+#hint {
+    display: none;
+    position: absolute;
+    font-size: 12px;
+    background-color: black;
+    color: snow;
+    border: 1px solid gray;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+
+/* contact end */

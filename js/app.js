@@ -1,22 +1,37 @@
 // Content toggle start //
 
-$(document).ready(function(){
-  $("h3.flip").click(function () {
-    $(this).next("p.intro").slideToggle("slow");
-    return false;
+/*$(document).ready(function(){
+  $("div.lol").click(function () {
+    $(this).toggleClass("flipper");
+      console.log("1");
+    return true;
   });
 });
 $(document).ready(function(){
-  $("img.social").click(function () {
-    $(this).next("p.kon").slideToggle("slow");
-    return false;
+  $("div.back").click(function () {
+    $(this).toggleClass("flipper");
+    return true;
+  });
+});*/
+$(document).ready(function(){
+  $(".social").mouseenter(function (e) {
+      var hoverText = $(this).attr("title");
+      $("#hint").text(hoverText).show();
+      /*$("#hint").css("top", e.clientY+15).css("left", e.clientX+15);*/
+      console.log("1");
+  });
+});
+$(document).ready(function(){
+  $("img.social").mouseleave(function() {
+        $("#hint").hide();
+      console.log("2");
   });
 });
 
 // Content toggle end //
 
 // Image slider start //
-
+/*
 var image1 = new Image();
 image1.src = "./img/design.jpg";
 var image2 = new Image();
@@ -66,5 +81,28 @@ $(document).ready(function(){
 });
 
 
-slideIt();
+slideIt();*/
 // Image slider end //
+function flipit(el, boo) {
+        
+        if(boo == true){
+        el.children[1].style.webkitTransform = "perspective(600px) rotateY(-180deg)";
+        el.children[0].style.webkitTransform = "perspective(600px) rotateY(0deg)";
+        el.children[1].style.transition = "all .5s linear 0s";
+        el.children[0].style.transition = "all .5s linear 0s";
+        el.children[1].style.transform = "perspective(600px) rotateY(-180deg)";
+        el.children[0].style.transform = "perspective(600px) rotateY(0deg)";
+        el.children[1].style.webkitTransition = "all .5s linear 0s";
+        el.children[0].style.webkitTransition = "all .5s linear 0s";
+        }
+        if(boo == false){
+        el.children[1].style.webkitTransform = "perspective(600px) rotateY(0deg)";
+        el.children[0].style.webkitTransform = "perspective(600px) rotateY(180deg)";
+        el.children[1].style.transition = "all .5s linear 0s";
+        el.children[0].style.transition = "all .5s linear 0s";
+        el.children[1].style.transform = "perspective(600px) rotateY(0deg)";
+        el.children[0].style.transform = "perspective(600px) rotateY(180deg)";
+        el.children[1].style.webkitTransition = "all .5s linear 0s";
+        el.children[0].style.webkitTransition = "all .5s linear 0s";
+        }
+    }
