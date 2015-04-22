@@ -236,10 +236,11 @@ a:active {
     display: inline;
     margin: 100px;
     text-align: center;
+    
 }
 .hint {
     display: none;
-    position: absolute;
+    position: relative;
     font-size: 12px;
     background-color: black;
     color: snow;

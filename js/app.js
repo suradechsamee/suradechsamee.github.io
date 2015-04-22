@@ -15,18 +15,16 @@ $(document).ready(function(){
 });*/
 $(document).ready(function(){
   $(".social").mouseenter(function (e) {
-      var hoverText = $(this).attr("hinttext");
-      $(".hint").text(hoverText).show();
-      /*$("#hint").css("top", e.clientY+15).css("left", e.clientX+15);*/
-      console.log("1");
+      var hoverText = $(this).attr("title");
+      $(".hint").text(hoverText).show();     
   });
 });
 $(document).ready(function(){
   $(".social").mouseleave(function() {
         $(".hint").hide();
-      console.log("2");
   });
 });
+
 
 // Content toggle end //
 
