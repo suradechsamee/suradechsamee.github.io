@@ -237,8 +237,7 @@ a:active {
     margin: 100px;
     text-align: center;
 }
-
-#hint {
+.hint {
     display: none;
     position: absolute;
     font-size: 12px;

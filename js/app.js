@@ -15,15 +15,15 @@ $(document).ready(function(){
 });*/
 $(document).ready(function(){
   $(".social").mouseenter(function (e) {
-      var hoverText = $(this).attr("title");
-      $("#hint").text(hoverText).show();
+      var hoverText = $(this).attr("hinttext");
+      $(".hint").text(hoverText).show();
       /*$("#hint").css("top", e.clientY+15).css("left", e.clientX+15);*/
       console.log("1");
   });
 });
 $(document).ready(function(){
-  $("img.social").mouseleave(function() {
-        $("#hint").hide();
+  $(".social").mouseleave(function() {
+        $(".hint").hide();
       console.log("2");
   });
 });
