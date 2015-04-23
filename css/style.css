@@ -1,15 +1,12 @@
 /* Base Styles -------------------- */
-
 * {
     box-sizing: border-box;
 }
-
 body {
     color: #878787;
     margin: 0;
     font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 h1 {  
     font-size: 5.625rem; /* 90px/16px  */
     color: rgba(255, 255, 255, 1);
@@ -20,15 +17,12 @@ h1 {
                 4px 2px 0px cyan,
                 6px 4px 0px pink;
 }
-
 h2 {
     font-size: 3.3125em; /* 53px/16px  */
     font-weight: bold;
     line-height: 1.1;
-    margin: 0 0 .5em; /* 0 0 26px */
-    
+    margin: 0 0 .5em; /* 0 0 26px */    
 }
-
 h3 {
     font-size: 1.25em; /* 20px/16px  */
     color: white;
@@ -36,45 +30,34 @@ h3 {
     margin-top: 150px;
     /*margin-bottom: 1.7em; /* 34px */
     text-align: center;
-    
 }
-
 img {
     max-width: 100%;
     margin-bottom: 20px;
 }
-
 ul,
 ol {
     margin: 30px 0;
 }
-
 li {
     margin-bottom: 10px;
 }
-
 /* Pseudo-classes ------------------ */
-
-
 a:link {
     color: rgb(255, 169, 73);
     text-decoration: none;
 }
-
 a:visited {
     color: lightblue;
+    text-align: center;
 }
-
 a:hover {
     color: rgba(255, 169, 73, .4);
 }
-
 a:active {
     color: lightcoral;
 }
-
 /* Main Styles --------------------- */
-
 .main-header {
     padding-top: 100px;
     height: 450px; 
@@ -83,7 +66,6 @@ a:active {
         url('../img/ocean.png');
     background-size: cover;
     background-blend-mode: darken;
-
 }
 .lol {
     max-width: 45%;
@@ -92,41 +74,33 @@ a:active {
 .rol {
     max-width: 45%;
     float: right;
-    
 }
-
 .title {
     color: white;
     font-size: 1.25rem; /* 26px/16px */
 }
-
 .intro {
     padding: 8px;
     color: rgb(55, 169, 173);
     font-size: 1em; /* 20px/16px */
     line-height: 1.6; 
     margin: 30px;
-    margin-top: 80px;
-    
+    margin-top: 80px;    
 }
-
 .primary-content,
 .main-header,
 .main-footer {
     text-align: center;
 }
-
 .primary-content {
 	padding-top: 25px;
     padding-bottom: 95px;
 }
-
 .secondary-content {
 	padding-top: 80px;
 	padding-bottom: 70px;
     /*border-bottom: 2px solid #dfe2e6;*/
 }
-
 .callout {
     font-size: 1.25em;
     border-bottom: 3px solid;
@@ -134,19 +108,15 @@ a:active {
     margin-top: 20px;
     display: inline-block;
 }
-
 .main-footer {
     padding-top: 60px;
     padding-bottom: 60px;
     border-bottom: 10px solid #ffa949;
 }
-
 /*.t-border {
     border-top: 2px solid #dfe2e6;
 }*/
-
 /* Layout Styles ------------------ */
-
 .primary-content, 
 .secondary-content {
     width: 75%;
@@ -155,7 +125,6 @@ a:active {
     margin: auto;
     max-width: 960px;
 }
-
 /*.skills {
     color: white;
     text-align: center;
@@ -167,26 +136,48 @@ a:active {
     background-size: cover;
     box-shadow:inset 0px 0px 100px 50px black;
     border-radius: 20% 30% 100% 50%; 
-}
-*/
-
+}*/
 /* Floated Columns ------------------ */
-
-
-.kon {
-    display: none;
+#overlay {
+	display: none;
+	z-index: 1000;
+	background: #000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.8;
 }
-
+#specialBox, #specialBox2, #specialBox3 {
+	display: none;
+    left: 50%;
+	position: fixed;
+	z-index: 1000;
+	margin-left: -250px;
+	width: 500px; 
+	height: 300px;
+	background: #FFF;
+	color: #000;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.kon{
+    text-align: center;
+    padding: 10px;
+}
+.toggleOverlay {
+    margin-left: 45%;
+}
 /* Float Clearfix ------------------ */
-
 .group:after {
     content: "";
     display: table;
     clear: both;
 }
-
 /* flip effect */
-
 .flipper {
     width: 350px;
     height: 400px;
@@ -223,13 +214,8 @@ a:active {
 .flipper:hover > .back{
     transform: perspective( 600px ) rotateY( 0deg );
 }
-
-
-
 /* flip effect end */
-
 /* contact */
-
 #mail,
 #phone,
 #fbook {
@@ -238,17 +224,4 @@ a:active {
     text-align: center;
     
 }
-.hint {
-    display: none;
-    position: relative;
-    font-size: 12px;
-    background-color: black;
-    color: snow;
-    border: 1px solid gray;
-    padding: 8px;
-    border-radius: 5px;
-}
-
-
-
 /* contact end */
